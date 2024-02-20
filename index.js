@@ -103,7 +103,7 @@ inquirer.prompt([
 
         const readMeContent = writeToFile(answers);
 
-        fs.writeFile('newReadme.md', readMeContent, (err) =>
+        fs.writeFile('newReadme2.md', readMeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });

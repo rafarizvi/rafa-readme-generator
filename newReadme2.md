@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this project is to to generate a readme file. prompts questions to users, then uses the answers in a preset readme format. users can expect a well organized read me file that contains all necessary information..
+The goal of this project is to generate a readme file. prompts questions to users, then uses the answers in a preset readme format. users can expect a well organized read me file that contains all necessary information..
 
 ## Link to webpage
 [Deployed Link](https://github.com/public-apis/public-apis)
