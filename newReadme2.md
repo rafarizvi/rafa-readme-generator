@@ -1,36 +1,42 @@
-# rafa-readme-generator
+# hgfd
 
-## Description
+### license badges.
+![Static Badge](https://img.shields.io/badge/MIT-green)
+![Static Badge](https://img.shields.io/badge/License-MIT-blue)
 
-The goal of this project is to generate a readme file. prompts questions to users, then uses the answers in a preset readme format. users can expect a well organized read me file that contains all necessary information..
+## <a id="descr"></a> Description
 
-## Link to webpage
-[Deployed Link](https://github.com/public-apis/public-apis)
+yhgtf
 
-## Installation
+## Table of Contents
+* [Description](#descr)
+* [Installation](#install)
+* [Usage](#usg)
+* [License](#licen)
+* [Contributing ](#contr)
+* [Tests](#tests)
+* [Questions](#qst)
 
-N/A
+## <a id="install"></a> Installation
 
-## Usage
+hgf
 
-simply answer the question prompted by the app, and open the generated readme file.
+## <a id="usg"></a> Usage
 
-![screenshot of password generator webpage](assets/images/webpage-screen-shot.png)
+hgf
 
-## Credits
+## <a id="licen"></a> License
 
-N/A
+[!NOTE] 
+This project uses the MIT License.
 
-## License
+## <a id="contr"></a> Contributing 
+hg
 
-This project uses the MIT.
+## <a id="tests"></a> Tests
+hgf
 
-## Badges
+## <a id="qst"></a> Questions
+[hg](https://github.com/hg)
 
-![Static Badge](https://img.shields.io/badge/JavaScript-green)
-![Static Badge](https://img.shields.io/badge/HTML-CSS-blue)
-
-
-## Features
-
-answer questions, open new readme file.
+hgf 

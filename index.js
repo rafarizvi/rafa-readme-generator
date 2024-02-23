@@ -3,81 +3,82 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = ['what is the purpose of this application?', 'How does it function?',
-    'What result can users expet?', 'Provide the link to the webpage?',
-    'Provide instructions on how to use the application.', 'What license does application use?',
-    'Provide a list of features for this application.'];
 
-const [purpose, functionality, result, link, usage, license, featureList] = questions;
+// TODO: Create an array of questions for user input
+const inputs = ['Enter project title:','Describe your project:', 
+'Provide installation instructions (if any):', 'Provide usage information:', 
+'Select a license for your application:', 'What are the contribution guidelines:', 
+'What are the test instructions:', 'Enter your GitHub user name:', 'Enter your email address:'];
+
+const [appName, description, installation, usage, license, contributing, tests, github, email] = inputs;
 
 // TODO: Create a function to write README file
 //function writeToFile(fileName, data) {}
 //const readMe = ({purpose}) =>
 
-const writeToFile = ({ purpose, functionality, result, link, usage, license, featureList }) =>
+const writeToFile = ({ appName, description, installation, usage, license, contributing, tests, github, email }) =>
 
-`# rafa-readme-generator
+`# ${appName}
 
-## Description
+### license badges.
 
-The goal of this project is to ${purpose}. ${functionality}. ${result}.
+![Static Badge](https://img.shields.io/badge/License-${license}-blue)
 
-## Link to webpage
-[Deployed Link](${link})
+## <a id="descr"></a> Description
 
-## Installation
+${description}
 
-N/A
+## Table of Contents
+* [Description](#descr)
+* [Installation](#install)
+* [Usage](#usg)
+* [License](#licen)
+* [Contributing ](#contr)
+* [Tests](#tests)
+* [Questions](#qst)
 
-## Usage
+## <a id="install"></a> Installation
+
+${installation}
+
+## <a id="usg"></a> Usage
 
 ${usage}
 
-![screenshot of password generator webpage](assets/images/webpage-screen-shot.png)
+## <a id="licen"></a> License
 
-## Credits
+[!NOTE] 
+This project uses the ${license} License.
 
-N/A
+## <a id="contr"></a> Contributing 
+${contributing}
 
-## License
+## <a id="tests"></a> Tests
+${tests}
 
-This project uses the ${license}.
+## <a id="qst"></a> Questions
+[${github}](https://github.com/${github})
 
-## Badges
-
-![Static Badge](https://img.shields.io/badge/JavaScript-green)
-![Static Badge](https://img.shields.io/badge/HTML-CSS-blue)
-
-
-## Features
-
-${featureList}`;
+${email} `
 
 
 inquirer.prompt([
     {
         type: 'input',
-        name: 'purpose',
-        message: purpose,
+        name: 'appName',
+        message: appName,
     },
 
     {
         type: 'input',
-        name: 'functionality',
-        message: functionality,
+        name: 'description',
+        message: description,
     },
 
     {
         type: 'input',
-        name: 'result',
-        message: result,
-    },
-
-    {
-        type: 'input',
-        name: 'link',
-        message: link,
+        name: 'installation',
+        message: installation,
     },
 
     {
@@ -87,15 +88,34 @@ inquirer.prompt([
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: license,
+        choices: ['MIT', 'Li1', 'Li2'],
     },
 
     {
         type: 'input',
-        name: 'featureList',
-        message: featureList,
+        name: 'contributing',
+        message: contributing,
+    },
+
+    {
+        type: 'input',
+        name: 'tests',
+        message: tests,
+    },
+
+    {
+        type: 'input',
+        name: 'github',
+        message: github,
+    },
+
+    {
+        type: 'input',
+        name: 'email',
+        message: email,
     }
 
 ])
